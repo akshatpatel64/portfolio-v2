@@ -59,18 +59,12 @@ export default function Contact() {
           transition={{ duration: 0.65 }}
           className="glass rounded-2xl p-10 md:p-14 text-center max-w-2xl mx-auto"
         >
-          {/* Status badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wider uppercase mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Open to opportunities
-          </div>
-
           <p className="text-slate-300 text-lg leading-relaxed mb-3">
-            Looking for roles in AI engineering, cloud security, and agentic system design.
+            I work at the intersection of AI engineering and security. Most interesting problems live somewhere between the two.
           </p>
           <p className="text-slate-500 text-sm leading-relaxed mb-10">
-            Currently at Maryland Athletics building staff-facing AI automations. Always happy
-            to talk agentic AI, LLM guardrails, or AWS security architecture.
+            Currently at Maryland Athletics, shipping agent workflows across Marketing, HR, and Operations.
+            If something here resonates with what you&apos;re building, reach out.
           </p>
 
           <a
