@@ -37,7 +37,7 @@ const projects = [
     period: "March 2024 – April 2025",
     url: "https://umd.box.com/s/yb1taaurwy4y93bcrlyfl0imanihyxfw",
     summary:
-      "Designed and deployed a secure, scalable production-ready e-commerce platform on AWS. Multi-tier VPC with private EC2 servers, ALB + Auto Scaling, RDS MySQL (Multi-AZ), CloudFront-backed S3. Integrated AWS WAF, ACM, IAM, Secrets Manager, and bastion host. Validated under AWS Well-Architected Framework.",
+      "Designed and validated a secure multi-tier AWS e-commerce architecture with private EC2 application tiers, ALB + Auto Scaling, Multi-AZ RDS, CloudFront-backed S3, WAF, ACM, IAM roles, and Secrets Manager. Sustained 55K+ JMeter requests under load while blocking 1,500+ simulated malicious requests. Validated under AWS Well-Architected Framework.",
     tags: ["academic", "AWS", "Cloud Architecture", "DevSecOps"],
   },
   {

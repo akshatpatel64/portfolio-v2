@@ -4,47 +4,142 @@ import { motion } from "framer-motion";
 
 const skills = [
   {
-    category: "Tools & Technologies",
-    icon: "⚙️",
-    accent: "from-blue-500/10 to-indigo-500/5",
+    category: "AI Engineering & Agents",
+    icon: "🤖",
+    accent: "from-violet-500/10 to-purple-500/5",
     items: [
-      "AWS CLI", "Microsoft Azure", "Google Cloud Platform",
-      "Wireshark", "Snort", "Security Onion", "Zeek",
-      "Rapid7 InsightVM", "Nessus", "Metasploit Framework",
-      "sqlmap", "OWASP ZAP", "Burp Suite", "Nmap/Zenmap",
-      "JAMF Pro", "Microsoft Defender ATP", "Splunk",
-      "Autopsy", "FTK Imager", "Volatility", "ExifTool",
-      "BloodHound", "Hashcat", "PowerShell Empire",
+      "Microsoft Foundry",
+      "Foundry Agent Service",
+      "Microsoft Copilot Studio",
+      "Microsoft Teams Agents",
+      "Power Platform",
+      "Prompt Engineering",
+      "Custom Agents / Copilots",
+      "Tool / Function Calling",
+      "Knowledge Grounding",
+      "Retrieval-Augmented Generation (RAG)",
+      "LLM Response Evaluation",
+      "Guardrails",
+      "Workflow Automation",
+      "AI Workflow Design",
     ],
   },
   {
-    category: "Security Frameworks",
+    category: "Cloud & AI Infrastructure",
+    icon: "☁️",
+    accent: "from-blue-500/10 to-cyan-500/5",
+    items: [
+      "AWS",
+      "Amazon Bedrock",
+      "Lambda",
+      "S3",
+      "RDS",
+      "VPC",
+      "IAM",
+      "WAF",
+      "KMS",
+      "CloudTrail",
+      "CloudWatch",
+      "Secrets Manager",
+      "Route 53",
+      "Docker",
+      "Terraform",
+      "Amazon EKS",
+    ],
+  },
+  {
+    category: "AI Security & Governance",
+    icon: "🔐",
+    accent: "from-rose-500/10 to-pink-500/5",
+    items: [
+      "NIST AI RMF",
+      "OWASP Top 10 for LLM Applications",
+      "Prompt-Injection Risk",
+      "Data Classification Review",
+      "RBAC",
+      "Least Privilege",
+      "SSO / MFA",
+      "Access Policies",
+      "Secrets Management",
+      "Secure SDLC",
+    ],
+  },
+  {
+    category: "Security Operations",
     icon: "🛡️",
-    accent: "from-purple-500/10 to-violet-500/5",
+    accent: "from-indigo-500/10 to-blue-500/5",
     items: [
-      "NIST (CSF, SP 800-53)", "MITRE ATT&CK", "OWASP Top 10",
-      "HIPAA", "GDPR", "ISO/IEC 27001", "ITIL",
-      "FAIR", "OCTAVE", "Cyber Kill Chain", "Unified Kill Chain",
+      "Rapid7 InsightVM",
+      "Splunk",
+      "Security Onion",
+      "ELK Stack",
+      "CrowdStrike",
+      "Snort",
+      "Wireshark",
+      "Vulnerability Management",
+      "SIEM-Aligned Triage",
+      "Endpoint Security",
     ],
   },
   {
-    category: "Programming Languages",
-    icon: "💻",
+    category: "MLOps / Observability",
+    icon: "📊",
     accent: "from-emerald-500/10 to-teal-500/5",
-    items: ["Python", "C", "C++", "Java", "SQL", "Perl", "Shell Scripting"],
+    items: [
+      "OpenTelemetry",
+      "Prometheus",
+      "Grafana",
+      "GitHub Actions",
+      "Response Monitoring",
+      "Tracing",
+      "Alerting",
+      "Reliability Validation",
+      "Deployment Rollback Testing",
+    ],
   },
   {
-    category: "Soft Skills",
-    icon: "🧠",
-    accent: "from-amber-500/10 to-orange-500/5",
+    category: "Security Testing",
+    icon: "🔍",
+    accent: "from-orange-500/10 to-amber-500/5",
     items: [
-      "Critical Thinking & Problem Solving",
-      "Communication",
-      "Team Collaboration",
-      "Adaptability & Learning",
-      "Leadership",
-      "Attention to Detail",
-      "Technical Documentation",
+      "Burp Suite",
+      "OWASP ZAP",
+      "Nmap",
+      "Metasploit",
+      "Nikto",
+      "Autopsy",
+      "FTK Imager",
+    ],
+  },
+  {
+    category: "Programming & Data",
+    icon: "💻",
+    accent: "from-sky-500/10 to-blue-500/5",
+    items: [
+      "Python",
+      "SQL",
+      "PowerShell",
+      "Bash",
+      "JavaScript",
+      "Pandas",
+      "Excel Automation",
+      "JSON",
+      "REST APIs",
+      "Data Validation",
+      "Reporting Automation",
+    ],
+  },
+  {
+    category: "Enterprise Platforms",
+    icon: "🏢",
+    accent: "from-slate-500/10 to-gray-500/5",
+    items: [
+      "Microsoft 365",
+      "Google Workspace",
+      "Intune MDM",
+      "JAMF",
+      "HelpScout",
+      "1Password",
     ],
   },
 ];
@@ -70,10 +165,9 @@ export default function Skills() {
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: gi * 0.08 }}
+              transition={{ duration: 0.5, delay: (gi % 4) * 0.07 }}
               className={`glass rounded-2xl p-6 bg-gradient-to-br ${group.accent}`}
             >
-              {/* Card header */}
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2.5">
                   <span className="text-xl" role="img" aria-label={group.category}>
@@ -88,7 +182,6 @@ export default function Skills() {
                 </span>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span

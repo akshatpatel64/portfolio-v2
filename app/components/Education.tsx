@@ -7,7 +7,7 @@ const degrees = [
     name: "Master of Engineering in Cybersecurity",
     institution: "University of Maryland, College Park",
     url: "https://umd.edu/",
-    period: "2023 – 2025",
+    period: "August 2023 – May 2025",
     gpa: "3.66 / 4.0",
     courses: [
       "ENPM691 Hacking of C Programs and UNIX Binaries",
@@ -26,12 +26,12 @@ const degrees = [
     name: "Bachelor of Technology in Electronics & Communication Engineering",
     institution: "Charotar University of Science and Technology",
     url: "https://www.charusat.ac.in/",
-    period: "2019 – 2023",
+    period: "July 2019 – May 2023",
     gpa: "9.64 / 10 (CGPA)",
     extras: [
-      "Springer publication: Privacy Challenges and Solutions in Implementing Searchable Encryption for Cloud Storage",
-      "Research collaboration with Dr. Trushit Upadhyaya and Dr. Upesh Patel on antenna technology and cybersecurity implications",
-      "Club Coordinator at Code for Cause · Board member for university magazine",
+      "First-authored Springer Nature conference paper: \"Privacy Challenges and Solutions in Implementing Searchable Encryption for Cloud Storage\" — published at ICTIS 2023 (LNNS Vol. 719)",
+      "Led 13.5-month cloud-security research on privacy-preserving search over encrypted cloud data with Dr. Trushit Upadhyaya and Dr. Upesh Patel",
+      "Club Coordinator at Code for Cause · Board member for university magazine · Internshala Student Partner",
     ],
   },
   {
@@ -103,9 +103,9 @@ export default function Education() {
               )}
 
               {deg.extras && (
-                <ul className="mt-4 flex flex-col gap-1.5">
+                <ul className="mt-4 flex flex-col gap-2">
                   {deg.extras.map((e) => (
-                    <li key={e} className="text-slate-400 text-sm flex gap-2">
+                    <li key={e} className="text-slate-400 text-sm flex gap-2 leading-relaxed">
                       <span className="text-[#667eea] mt-1 flex-shrink-0">▸</span>
                       {e}
                     </li>

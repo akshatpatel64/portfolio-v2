@@ -71,7 +71,7 @@ export default function Hero() {
               {...fadeUp(0.1)}
               className="text-sm font-medium text-[#667eea] tracking-widest uppercase mb-4"
             >
-              Sr. IT Security &amp; AI Automation Specialist · Maryland Athletics
+              AI Engineer · Secure Agentic AI &amp; Automation · Maryland Athletics
             </motion.p>
 
             <motion.h1
@@ -96,8 +96,8 @@ export default function Hero() {
               {...fadeUp(0.44)}
               className="text-slate-500 text-base mb-8 max-w-lg leading-relaxed"
             >
-              Deploying governed AI agents · Vulnerability management across 600+ endpoints ·
-              AWS Security Specialist · MEng Cybersecurity, UMD
+              Microsoft Foundry & Copilot Studio · Vulnerability management 600+ endpoints ·
+              AWS Certified Security – Specialty · MEng Cybersecurity, UMD
             </motion.p>
 
             {/* CTAs */}

@@ -4,16 +4,30 @@ import { motion } from "framer-motion";
 
 const certs = [
   {
-    name: "ISC2 Certified in Cybersecurity (CC)",
-    url: "https://www.credly.com/badges/1342fa92-054d-4f81-a751-c8e4e9905cb0/public_url",
+    name: "AWS Certified Security – Specialty",
+    url: "https://www.credly.com/",
+    badge: "🔐",
+  },
+  {
+    name: "AWS Certified Cloud Practitioner",
+    url: "https://www.credly.com/",
+    badge: "☁️",
   },
   {
     name: "CompTIA Security+",
     url: "https://www.credly.com/badges/dc3fd9bc-3cac-4946-a2ab-4ff586c98c29/public_url",
+    badge: "🛡️",
   },
   {
-    name: "CompTIA Network+",
-    url: "https://www.credly.com/badges/dc3fd9bc-3cac-4946-a2ab-4ff586c98c29/public_url",
+    name: "ISC2 Certified in Cybersecurity (CC)",
+    url: "https://www.credly.com/badges/1342fa92-054d-4f81-a751-c8e4e9905cb0/public_url",
+    badge: "✅",
+  },
+  {
+    name: "Microsoft Azure AI Engineer Associate",
+    url: "#",
+    badge: "⏳",
+    inProgress: true,
   },
 ];
 
@@ -32,28 +46,38 @@ export default function About() {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Bio */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
           >
-            <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              I&apos;m a cybersecurity engineer with a passion for building secure, reliable systems
-              that make a real impact. My work blends network defense, cloud security, and automation
-              — from creating <span className="text-white font-medium">SnortEduGuard</span>, an
-              AI-powered academic intrusion detection system, to designing{" "}
-              <span className="text-white font-medium">SecureScalr</span>, an AWS-based e-commerce
-              platform built on best-practice architecture.
+            <p className="text-slate-300 text-lg leading-relaxed mb-5">
+              I&apos;m an{" "}
+              <span className="text-white font-semibold">AI Engineer</span> with a
+              security-first background, building staff-facing agents, governed AI workflows,
+              and secure automation systems at Maryland Athletics. Using{" "}
+              <span className="text-white font-medium">Microsoft Foundry</span> and{" "}
+              <span className="text-white font-medium">Copilot Studio</span>, I translate
+              departmental workflows into AI automations that return time to Marketing,
+              HR, and Operations — while applying least-privilege design and OWASP/NIST-aligned
+              risk thinking throughout.
             </p>
-            <p className="text-slate-400 leading-relaxed">
-              At Maryland Athletics, I manage vulnerability remediation, strengthen compliance, and
-              support day-to-day IT needs — all while exploring new ways to integrate cloud-native
-              observability and smarter detection techniques. I hold a Master&apos;s in Engineering
-              in Cybersecurity from the University of Maryland, College Park (GPA 3.66/4.0).
+            <p className="text-slate-400 leading-relaxed mb-5">
+              Beyond the day-to-day, I built{" "}
+              <span className="text-white font-medium">MomentumEngine</span> — a secure
+              agentic AI research platform on AWS Bedrock combining a deterministic ranking
+              engine with LLM agents — and have hands-on depth in vulnerability management,
+              cloud security, and detection engineering.
+            </p>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              MEng Cybersecurity, University of Maryland College Park (GPA 3.66/4.0) ·
+              First-authored Springer Nature publication at ICTIS 2023.
             </p>
           </motion.div>
 
+          {/* Certifications */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,33 +87,44 @@ export default function About() {
             <h3 className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-4">
               Certifications
             </h3>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               {certs.map((c) => (
                 <a
                   key={c.name}
                   href={c.url}
-                  target="_blank"
+                  target={c.url === "#" ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="glass glass-hover rounded-xl px-5 py-4 text-slate-300 text-sm font-medium hover:text-white transition-all duration-200 flex items-center gap-3 group"
+                  className="glass glass-hover rounded-xl px-4 py-3.5 text-slate-300 text-sm font-medium hover:text-white transition-all duration-200 flex items-center gap-3 group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-br from-[#667eea] to-[#764ba2] flex-shrink-0" />
-                  {c.name}
-                  <span className="ml-auto text-slate-600 group-hover:text-[#667eea] transition-colors text-xs">↗</span>
+                  <span className="text-base flex-shrink-0">{c.badge}</span>
+                  <span className="flex-1">{c.name}</span>
+                  {c.inProgress ? (
+                    <span className="text-[10px] font-semibold text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded-full flex-shrink-0">
+                      IN PROGRESS
+                    </span>
+                  ) : (
+                    <span className="ml-auto text-slate-600 group-hover:text-[#667eea] transition-colors text-xs flex-shrink-0">
+                      ↗
+                    </span>
+                  )}
                 </a>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {["Collaborative Mindset", "Work Ethic", "Leadership", "Continuous Learning"].map(
-                (skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 rounded-full text-xs font-medium bg-[#667eea]/10 border border-[#667eea]/20 text-[#667eea]"
-                  >
-                    {skill}
-                  </span>
-                )
-              )}
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "Security-First AI Design",
+                "Least-Privilege Architecture",
+                "Technical Documentation",
+                "Continuous Learning",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-[#667eea]/10 border border-[#667eea]/20 text-[#667eea]"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </motion.div>
         </div>
