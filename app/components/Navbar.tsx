@@ -11,6 +11,7 @@ const links = [
   { label: "Projects",   href: "#projects" },
   { label: "Focus",      href: "#focus" },
   { label: "Posts",      href: "#posts" },
+  { label: "Contact",    href: "#contact" },
 ];
 
 export default function Navbar() {

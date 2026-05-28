@@ -99,3 +99,37 @@ body {
   50%       { transform: translateY(6px); }
 }
 .bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+
+/* Custom magnetic cursor — pointer devices only */
+@media (hover: hover) and (pointer: fine) {
+  html, a, button { cursor: none !important; }
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(102, 126, 234, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #667eea;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-ring, .cursor-dot { display: none; }
+}

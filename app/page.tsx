@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import CurrentFocus from "./components/CurrentFocus";
 import Posts from "./components/Posts";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function Divider() {
@@ -40,6 +41,8 @@ export default function Home() {
         </div>
         <Divider />
         <Posts />
+        <Divider />
+        <Contact />
       </main>
       <Footer />
     </>
