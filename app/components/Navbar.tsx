@@ -50,8 +50,17 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#hero" className="font-bold text-lg gradient-text tracking-tight">
-          AK
+        <a href="#hero" aria-label="Home">
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+            <defs>
+              <linearGradient id="nav-logo-g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#667eea"/>
+                <stop offset="100%" stopColor="#764ba2"/>
+              </linearGradient>
+            </defs>
+            <path d="M 4 28 L 16 4 L 28 28" fill="none" stroke="url(#nav-logo-g)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <line x1="10" y1="21" x2="22" y2="21" stroke="url(#nav-logo-g)" strokeWidth="3" strokeLinecap="round"/>
+          </svg>
         </a>
 
         {/* Desktop links with animated active underline */}
