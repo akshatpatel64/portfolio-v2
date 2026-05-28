@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 const skills = [
   {
     category: "AI Engineering & Agents",
-    icon: "🤖",
+    abbr: "AI",
     accent: "from-violet-500/10 to-purple-500/5",
+    border: "hover:border-violet-500/30",
     items: [
       "Microsoft Foundry",
       "Foundry Agent Service",
@@ -26,8 +27,9 @@ const skills = [
   },
   {
     category: "Cloud & AI Infrastructure",
-    icon: "☁️",
+    abbr: "CL",
     accent: "from-blue-500/10 to-cyan-500/5",
+    border: "hover:border-blue-500/30",
     items: [
       "AWS",
       "Amazon Bedrock",
@@ -49,8 +51,9 @@ const skills = [
   },
   {
     category: "AI Security & Governance",
-    icon: "🔐",
+    abbr: "SG",
     accent: "from-rose-500/10 to-pink-500/5",
+    border: "hover:border-rose-500/30",
     items: [
       "NIST AI RMF",
       "OWASP Top 10 for LLM Applications",
@@ -66,8 +69,9 @@ const skills = [
   },
   {
     category: "Security Operations",
-    icon: "🛡️",
+    abbr: "SO",
     accent: "from-indigo-500/10 to-blue-500/5",
+    border: "hover:border-indigo-500/30",
     items: [
       "Rapid7 InsightVM",
       "Splunk",
@@ -83,8 +87,9 @@ const skills = [
   },
   {
     category: "MLOps / Observability",
-    icon: "📊",
+    abbr: "ML",
     accent: "from-emerald-500/10 to-teal-500/5",
+    border: "hover:border-emerald-500/30",
     items: [
       "OpenTelemetry",
       "Prometheus",
@@ -99,8 +104,9 @@ const skills = [
   },
   {
     category: "Security Testing",
-    icon: "🔍",
+    abbr: "ST",
     accent: "from-orange-500/10 to-amber-500/5",
+    border: "hover:border-orange-500/30",
     items: [
       "Burp Suite",
       "OWASP ZAP",
@@ -113,8 +119,9 @@ const skills = [
   },
   {
     category: "Programming & Data",
-    icon: "💻",
+    abbr: "PD",
     accent: "from-sky-500/10 to-blue-500/5",
+    border: "hover:border-sky-500/30",
     items: [
       "Python",
       "SQL",
@@ -131,8 +138,9 @@ const skills = [
   },
   {
     category: "Enterprise Platforms",
-    icon: "🏢",
+    abbr: "EP",
     accent: "from-slate-500/10 to-gray-500/5",
+    border: "hover:border-slate-500/30",
     items: [
       "Microsoft 365",
       "Google Workspace",
@@ -166,18 +174,24 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (gi % 4) * 0.07 }}
-              className={`glass rounded-2xl p-6 bg-gradient-to-br ${group.accent}`}
+              className={`glass rounded-2xl p-6 bg-gradient-to-br ${group.accent} border border-white/[0.08] ${group.border} transition-colors duration-300`}
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xl" role="img" aria-label={group.category}>
-                    {group.icon}
-                  </span>
-                  <h3 className="text-sm font-semibold text-[#667eea] uppercase tracking-widest">
+                <div className="flex items-center gap-3">
+                  {/* Gradient monogram badge — professional alternative to emoji */}
+                  <div
+                    className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0"
+                    style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}
+                  >
+                    <span className="text-[10px] font-bold text-white tracking-wider select-none">
+                      {group.abbr}
+                    </span>
+                  </div>
+                  <h3 className="text-sm font-semibold text-slate-200 uppercase tracking-widest">
                     {group.category}
                   </h3>
                 </div>
-                <span className="text-xs text-slate-600 bg-white/[0.05] border border-white/[0.07] px-2.5 py-0.5 rounded-full tabular-nums">
+                <span className="text-xs text-slate-600 bg-white/[0.04] border border-white/[0.07] px-2.5 py-0.5 rounded-full tabular-nums">
                   {group.items.length}
                 </span>
               </div>
@@ -186,7 +200,7 @@ export default function Skills() {
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white/[0.05] border border-white/[0.07] text-slate-300 hover:border-[#667eea]/40 hover:text-white hover:bg-[#667eea]/10 transition-all duration-200 cursor-default"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white/[0.04] border border-white/[0.07] text-slate-400 hover:border-[#667eea]/40 hover:text-white hover:bg-[#667eea]/8 hover:-translate-y-px transition-all duration-200 cursor-default"
                   >
                     {item}
                   </span>
