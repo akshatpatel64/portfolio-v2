@@ -51,15 +51,23 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#hero" aria-label="Home">
-          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
             <defs>
-              <linearGradient id="nav-logo-g" x1="0" y1="0" x2="1" y2="1">
+              <linearGradient id="nav-g" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#667eea"/>
                 <stop offset="100%" stopColor="#764ba2"/>
               </linearGradient>
             </defs>
-            <path d="M 4 28 L 16 4 L 28 28" fill="none" stroke="url(#nav-logo-g)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            <line x1="10" y1="21" x2="22" y2="21" stroke="url(#nav-logo-g)" strokeWidth="3" strokeLinecap="round"/>
+            {/* A: left leg */}
+            <line x1="2" y1="28" x2="15.5" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* Shared stem */}
+            <line x1="15.5" y1="4" x2="15.5" y2="28" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* A: crossbar */}
+            <line x1="7.5" y1="20" x2="15.5" y2="20" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* K: upper arm */}
+            <line x1="15.5" y1="15" x2="29.5" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* K: lower arm */}
+            <line x1="15.5" y1="15" x2="29.5" y2="27" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
           </svg>
         </a>
 

@@ -5,7 +5,16 @@
       <stop offset="100%" stop-color="#764ba2"/>
     </linearGradient>
   </defs>
+  <!-- Dark rounded background so it reads on any browser chrome -->
   <rect width="32" height="32" rx="7" fill="#0d0d14"/>
-  <path d="M 5 27 L 16 5 L 27 27" fill="none" stroke="url(#g)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="10.5" y1="20" x2="21.5" y2="20" stroke="url(#g)" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- A: left leg -->
+  <line x1="2.5" y1="28" x2="15.5" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Shared stem: A right leg + K vertical -->
+  <line x1="15.5" y1="5" x2="15.5" y2="28" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- A: crossbar -->
+  <line x1="8" y1="20" x2="15.5" y2="20" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- K: upper arm -->
+  <line x1="15.5" y1="15" x2="29" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- K: lower arm -->
+  <line x1="15.5" y1="15" x2="29" y2="27" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
 </svg>
