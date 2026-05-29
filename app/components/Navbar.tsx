@@ -51,7 +51,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#hero" aria-label="Home">
-          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <svg viewBox="0 0 40 32" width="40" height="32" aria-hidden="true">
             <defs>
               <linearGradient id="nav-g" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#667eea"/>
@@ -59,15 +59,17 @@ export default function Navbar() {
               </linearGradient>
             </defs>
             {/* A: left leg */}
-            <line x1="2" y1="28" x2="15.5" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
-            {/* Shared stem */}
-            <line x1="15.5" y1="4" x2="15.5" y2="28" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            <line x1="2" y1="28" x2="13" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* A: right leg */}
+            <line x1="13" y1="4" x2="20" y2="22" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
             {/* A: crossbar */}
-            <line x1="7.5" y1="20" x2="15.5" y2="20" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            <line x1="6" y1="18" x2="17" y2="18" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            {/* K: stem */}
+            <line x1="22" y1="4" x2="22" y2="28" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
             {/* K: upper arm */}
-            <line x1="15.5" y1="15" x2="29.5" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            <line x1="22" y1="15" x2="37" y2="4" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
             {/* K: lower arm */}
-            <line x1="15.5" y1="15" x2="29.5" y2="27" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
+            <line x1="22" y1="15" x2="37" y2="28" stroke="url(#nav-g)" strokeWidth="2.6" strokeLinecap="round"/>
           </svg>
         </a>
 

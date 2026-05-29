@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#667eea"/>
       <stop offset="100%" stop-color="#764ba2"/>
     </linearGradient>
   </defs>
-  <!-- Dark rounded background so it reads on any browser chrome -->
-  <rect width="32" height="32" rx="7" fill="#0d0d14"/>
+  <rect width="40" height="32" rx="7" fill="#0d0d14"/>
   <!-- A: left leg -->
-  <line x1="2.5" y1="28" x2="15.5" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
-  <!-- Shared stem: A right leg + K vertical -->
-  <line x1="15.5" y1="5" x2="15.5" y2="28" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="2.5" y1="27" x2="13" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- A: right leg -->
+  <line x1="13" y1="5" x2="20" y2="22" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
   <!-- A: crossbar -->
-  <line x1="8" y1="20" x2="15.5" y2="20" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="6.5" y1="18" x2="17" y2="18" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- K: vertical stem -->
+  <line x1="22" y1="5" x2="22" y2="27" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
   <!-- K: upper arm -->
-  <line x1="15.5" y1="15" x2="29" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="22" y1="15" x2="36.5" y2="5" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
   <!-- K: lower arm -->
-  <line x1="15.5" y1="15" x2="29" y2="27" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="22" y1="15" x2="36.5" y2="27" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
 </svg>

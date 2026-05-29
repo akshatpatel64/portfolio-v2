@@ -73,8 +73,8 @@ const experiences = [
         title: "Independent Writer",
         period: "May 2023 – Present",
         bullets: [
-          "Write on AI engineering, cybersecurity, and threat modelling — covering topics from STRIDE threat models and MCP vs. Agentic AI distinctions to 2FA bypass techniques and incident breakdowns.",
-          "Provide actionable recommendations for preemptive and responsive cyber defense strategies.",
+          "Write about building secure AI systems, detection engineering, and the security decisions that don't make it into documentation — from threat modelling and cloud architecture to real incident analysis.",
+          "Cover the practical overlap between AI engineering and security: where the frameworks fall short, what actually works in production, and the tradeoffs engineers face when both domains are in play.",
         ],
       },
     ],
@@ -82,7 +82,7 @@ const experiences = [
   {
     company: "Dotsquares",
     url: "https://www.dotsquares.com/",
-    location: "Remote (University Placement)",
+    location: "Remote",
     positions: [
       {
         title: "Cybersecurity Co-op — Detection Engineering & Secure Application Review",
