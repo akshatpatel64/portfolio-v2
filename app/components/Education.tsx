@@ -106,7 +106,7 @@ export default function Education() {
                 <ul className="mt-4 flex flex-col gap-2">
                   {deg.extras.map((e) => (
                     <li key={e} className="text-slate-400 text-sm flex gap-2 leading-relaxed">
-                      <span className="text-[#667eea] mt-1 flex-shrink-0">▸</span>
+                      <span className="text-[#667eea] mt-0.5 flex-shrink-0 leading-none">▸</span>
                       {e}
                     </li>
                   ))}

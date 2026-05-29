@@ -168,7 +168,7 @@ export default function Experience() {
                       <ul className="flex flex-col gap-2">
                         {pos.bullets.map((b) => (
                           <li key={b} className="text-slate-400 text-sm leading-relaxed flex gap-2">
-                            <span className="text-[#667eea] mt-1.5 flex-shrink-0">▸</span>
+                            <span className="text-[#667eea] mt-0.5 flex-shrink-0 leading-none">▸</span>
                             {b}
                           </li>
                         ))}
