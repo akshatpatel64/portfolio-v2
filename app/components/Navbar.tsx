@@ -101,7 +101,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="https://umd.box.com/s/tzconsgykzqemq2webwd7glzqt6iq7ll"
+          href="https://umd.box.com/s/zsv6x958nxbeawj6hlt5hsc0oawqz2kz"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-[#667eea]/40 text-[#667eea] hover:bg-[#667eea]/10 transition-all duration-200"
@@ -146,7 +146,7 @@ export default function Navbar() {
               ))}
               <li className="pt-2 border-t border-white/[0.06]">
                 <a
-                  href="https://umd.box.com/s/tzconsgykzqemq2webwd7glzqt6iq7ll"
+                  href="https://umd.box.com/s/zsv6x958nxbeawj6hlt5hsc0oawqz2kz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#667eea] text-sm font-medium"
