@@ -4,6 +4,7 @@ import "./globals.css";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import Cursor from "./components/Cursor";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <ScrollProgress />
         {children}
         <BackToTop />
+        <GoogleAnalytics gaId="G-VMW83MX5Y4" />
       </body>
     </html>
   );
